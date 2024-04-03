@@ -9,25 +9,25 @@
                 </div>
                 <div class="social-links">
                     <div class="link">
-                        <a href="https://github.com/MattEberhart">
+                        <a href="https://github.com/MattEberhart" target="_blank">
                             <img src="../assets/github-icon.svg" alt="">
                             <h2>Github</h2>
                         </a>
                     </div>
                     <div class="link">
-                        <a href="https://www.linkedin.com/in/carleberhart/">
+                        <a href="https://www.linkedin.com/in/carleberhart/" target="_blank">
                             <img src="../assets/linkedin-icon-3.svg" alt="">
                             <h2>LinkedIn</h2>
                         </a>
                     </div>
                     <div class="link">
-                        <a href="https://www.instagram.com/matteberhart10/">
+                        <a href="https://www.instagram.com/matteberhart10/" target="_blank">
                             <img src="../assets/instagram-2016-5.svg" alt="">
                             <h2>Instagram</h2>
                         </a>
                     </div>
                     <div class="link">
-                        <a href="https://twitter.com/MattEberhart10">
+                        <a href="https://twitter.com/MattEberhart10" target="_blank">
                             <img src="../assets/twitter-logo-2.svg" alt="">
                             <h2>Twitter</h2>
                         </a>
