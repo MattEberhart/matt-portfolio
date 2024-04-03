@@ -9,6 +9,10 @@ on:
       - main
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ux
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,7 +24,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-
+          
       - name: npm install, build, and test
         run: |
           npm install
@@ -34,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: node-app
-          path: release.zip
+          path: ux/release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,6 +54,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
+          path: ux/
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
