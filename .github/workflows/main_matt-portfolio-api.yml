@@ -7,7 +7,12 @@ on:
   push:
     branches:
       - main
+      - testDeployment
   workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: backend/PortfolioAPI/PortfolioAPI
 
 jobs:
   build:
@@ -48,6 +53,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
+          path: backend/PortfolioAPI/PortfolioAPI/
       
       - name: Login to Azure
         uses: azure/login@v1
