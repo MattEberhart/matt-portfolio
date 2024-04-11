@@ -1,0 +1,13 @@
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/bin/Debug/net8.0/CloudProviders.deps.json
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/bin/Debug/net8.0/CloudProviders.dll
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/bin/Debug/net8.0/CloudProviders.pdb
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.csproj.AssemblyReference.cache
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.AssemblyInfoInputs.cache
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.AssemblyInfo.cs
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.csproj.CoreCompileInputs.cache
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.sourcelink.json
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.dll
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/refint/CloudProviders.dll
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/CloudProviders.pdb
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/CloudProviders/obj/Debug/net8.0/ref/CloudProviders.dll
