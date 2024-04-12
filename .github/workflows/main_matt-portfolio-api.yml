@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - matt-portfolio-api
+name: Build and Deploy matt-portfolio-api
 
 on:
   push:
@@ -54,6 +54,9 @@ jobs:
         with:
           name: .net-app
           path: backend/PortfolioAPI/PortfolioAPI/
+
+      - name: Move dlls to root.
+        run: mv backend/PortfolioAPI/PortfolioAPI/* .
       
       - name: Login to Azure
         uses: azure/login@v1
