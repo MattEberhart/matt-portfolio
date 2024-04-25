@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - main
-      - testDeployment
+      - testDeploymentApi
   workflow_dispatch:
 
 defaults:
