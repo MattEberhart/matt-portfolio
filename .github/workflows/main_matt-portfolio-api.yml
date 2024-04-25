@@ -10,10 +10,6 @@ on:
       - testDeployment
   workflow_dispatch:
 
-defaults:
-  run:
-    working-directory: backend/PortfolioAPI/PortfolioAPI
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -53,10 +49,6 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
-          path: backend/PortfolioAPI/PortfolioAPI/
-
-      - name: Move dlls to root.
-        run: mv ./backend/PortfolioAPI/PortfolioAPI/* ./
       
       - name: Login to Azure
         uses: azure/login@v1
