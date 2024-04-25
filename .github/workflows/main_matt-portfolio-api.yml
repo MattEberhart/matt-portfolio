@@ -31,13 +31,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o myapp
+        run: dotnet publish -c Release -o ${{ github.workspace }}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: .net-app
-          path: myapp
+          path: ${{ github.workspace }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -53,7 +53,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: .net-app
-          path: myapp
+          path: ${{ github.workspace }}
       
       - name: Login to Azure
         uses: azure/login@v1
