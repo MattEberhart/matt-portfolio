@@ -1,25 +1,43 @@
 <template>
     <div class="main-container">
-        <div class="project-card" v-for="item in projectData.ProjectsArray" v-bind:key="item.id">
-            <h2>{{ item.Title }}</h2>
-            <img :src="item.Image" alt="">
-            <p>{{ item.About }}</p>
+        <div class="project-card" v-for="item in portfolioApiData" v-bind:key="item.id">
+            <h2>{{ item.title }}</h2>
+            <img :src="item.image" alt="">
+            <p>{{ item.about }}</p>
             <div class="links">
-                <a v-if="item.Link1 !== ''" :href="item.Link1" target="_blank"><img src="../assets/github-icon.svg" alt="Github repository if public"></a>
-                <a v-if="item.Link2 !== ''" :href="item.Link2" target="_blank"><img src="../assets/link-arrow.png" alt="Related link"></a>
+                <a v-if="item.linkOne !== ''" :href="item.Link1" target="_blank"><img src="../assets/github-icon.svg" alt="Github repository if public"></a>
+                <a v-if="item.linkTwo !== ''" :href="item.Link2" target="_blank"><img src="../assets/link-arrow.png" alt="Related link"></a>
             </div>
         </div>
-    </div>
-    
+    </div> 
 </template>
 
 <script>
 import jsonData from "../assets/projects.json"
+import axios from 'axios'
 export default {
     data(){
         return{
-            projectData: jsonData
+            projectData: jsonData,
+            portfolioApiData: {}
         }
+    },
+    methods: {
+        GetProjects(){
+            axios.get('https://matt-portfolio-api.azurewebsites.net/projects', {
+                headers: {
+                    'Access-Control-Allow-Origin' : '*'
+                }
+            }).then(response => {
+                console.log(response)
+                this.portfolioApiData = response.data
+            }).catch(err => {
+                console.log(err)
+            })
+        }
+    },
+    mounted() {
+        this.GetProjects()
     }
 }
 </script>

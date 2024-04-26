@@ -29,6 +29,17 @@ public class Startup
         {
             options.SuppressModelStateInvalidFilter = true;
         });
+
+        services.AddCors(options =>
+        {
+            options.AddPolicy("AllowAll",
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+        });
         
         services.AddSwaggerGen(c =>
         {
@@ -47,6 +58,8 @@ public class Startup
             app.UseExceptionHandler("/Error");
             app.UseHsts();
         }
+
+        app.UseCors("AllowAll");
         
         app.UseHttpsRedirection();
         app.UseRouting();
@@ -55,11 +68,7 @@ public class Startup
             endpoints.MapControllers();
         });
         
-        // Enable middleware to serve generated Swagger as a JSON endpoint
         app.UseSwagger();
-
-        // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-        // specifying the Swagger JSON endpoint
         app.UseSwaggerUI(c =>
         {
             c.SwaggerEndpoint("/swagger/v1/swagger.json", "Portfolio API V1");
