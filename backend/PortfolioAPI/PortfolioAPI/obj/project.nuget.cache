@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Aza56hmxhWlj9c3evsit+eF5md8t65Z7LryDKE9XIioLxV91t1A4QJHk2CfSgiW/vvTmUiCqUo3wbNPRoJQKTQ==",
+  "dgSpecHash": "AFK5HrdmWWDUqWgEFTYwumelEUeyxXY1bCxP84jSbhLwsIbxLsPbeDAcmW66UVCEsROPoH4OHw7DIgkvfP/Clg==",
   "success": true,
   "projectFilePath": "/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/PortfolioAPI/PortfolioAPI.csproj",
   "expectedPackageFiles": [
     "/Users/matteberhart/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
+    "/Users/matteberhart/.nuget/packages/azure.data.tables/12.8.3/azure.data.tables.12.8.3.nupkg.sha512",
     "/Users/matteberhart/.nuget/packages/azure.identity/1.11.0/azure.identity.1.11.0.nupkg.sha512",
     "/Users/matteberhart/.nuget/packages/azure.storage.blobs/12.20.0-beta.1/azure.storage.blobs.12.20.0-beta.1.nupkg.sha512",
     "/Users/matteberhart/.nuget/packages/azure.storage.common/12.19.0-beta.1/azure.storage.common.12.19.0-beta.1.nupkg.sha512",

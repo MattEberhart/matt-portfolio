@@ -1,6 +1,6 @@
 namespace CloudProviders.StorageProviders;
 
-public interface IStorageProvider
+public interface IFileProvider
 {
     public Task CreateFileAsync(string folderName, string fileName, Stream stream);
 

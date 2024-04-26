@@ -16,11 +16,11 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         var azureStorageProviderSettings = new AzureStorageProviderSettings();
-        Configuration.GetSection(ConfigurationConstants.AzureStorageProviderSettings).Bind(azureStorageProviderSettings);
+        Configuration.GetSection(ConfigurationConstants.AzureTableStorageProviderSettings).Bind(azureStorageProviderSettings);
         services.AddSingleton<AzureStorageProviderSettings>(azureStorageProviderSettings);
-        services.AddSingleton<IStorageProvider, AzureStorageProvider>();
+        services.AddSingleton<ITableProviderFactory, AzureTableProviderFactory>();
         
-        services.AddSingleton<IProjectsRepository, ProjectsRepository>();
+        services.AddSingleton<IProjectsRepository, ProjectsRepositoryV2>();
 
         services.AddControllers();
         

@@ -2,5 +2,6 @@ namespace PortfolioAPI;
 
 public class ConfigurationConstants
 {
-    public const string AzureStorageProviderSettings = "AzureStorageProviderSettings";
+    public const string AzureBlobStorageProviderSettings = "AzureBlobStorageProviderSettings";
+    public const string AzureTableStorageProviderSettings = "AzureTableStorageProviderSettings";
 }

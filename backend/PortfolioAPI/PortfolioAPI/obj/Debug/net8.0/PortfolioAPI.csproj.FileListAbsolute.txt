@@ -51,3 +51,4 @@
 /Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/PortfolioAPI/obj/Debug/net8.0/PortfolioAPI.pdb
 /Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/PortfolioAPI/obj/Debug/net8.0/PortfolioAPI.genruntimeconfig.cache
 /Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/PortfolioAPI/obj/Debug/net8.0/ref/PortfolioAPI.dll
+/Users/matteberhart/Repos/matt-portfolio/backend/PortfolioAPI/PortfolioAPI/bin/Debug/net8.0/Azure.Data.Tables.dll

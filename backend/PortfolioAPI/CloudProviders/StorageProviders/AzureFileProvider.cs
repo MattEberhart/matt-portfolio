@@ -4,14 +4,14 @@ using Azure.Storage.Blobs;
 
 namespace CloudProviders.StorageProviders;
 
-public class AzureStorageProvider : IStorageProvider
+public class AzureFileProvider : IFileProvider
 {
     private BlobServiceClient _blobServiceClient;
     private Dictionary<string, BlobContainerClient> _blobContainerClients;
     private Dictionary<string, BlobClient> _blobClients;
     
     
-    public AzureStorageProvider(AzureStorageProviderSettings settings)
+    public AzureFileProvider(AzureStorageProviderSettings settings)
     {
         this._blobServiceClient = new BlobServiceClient(
             new Uri(settings.AzureStorageUrl),

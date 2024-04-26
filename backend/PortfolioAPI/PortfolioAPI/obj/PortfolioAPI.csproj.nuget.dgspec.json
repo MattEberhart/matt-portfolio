@@ -38,6 +38,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.3, )"
+            },
             "Azure.Identity": {
               "target": "Package",
               "version": "[1.11.0, )"
@@ -117,6 +121,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Azure.Data.Tables": {
+              "target": "Package",
+              "version": "[12.8.3, )"
+            },
             "JsonConverter.Newtonsoft.Json": {
               "target": "Package",
               "version": "[0.5.0, )"

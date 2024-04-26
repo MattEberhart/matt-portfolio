@@ -6,12 +6,12 @@ namespace PortfolioAPI.Repositories;
 
 public class ProjectsRepository : IProjectsRepository
 {
-    private IStorageProvider _storageProvider;
+    private IFileProvider _fileProvider;
     private const string ProjectsFolderName = "projects";
     
-    public ProjectsRepository(IStorageProvider storageProvider)
+    public ProjectsRepository(IFileProvider fileProvider)
     {
-        this._storageProvider = storageProvider;
+        this._fileProvider = fileProvider;
     }
 
     public async Task<Project> CreateProjectAsync(Project project)
@@ -24,14 +24,14 @@ public class ProjectsRepository : IProjectsRepository
         project.Id = Guid.NewGuid().ToString();
         var projectStream = project.SerializeToStreamContent();
 
-        await this._storageProvider.CreateFileAsync(ProjectsFolderName, project.Id, projectStream);
+        await this._fileProvider.CreateFileAsync(ProjectsFolderName, project.Id, projectStream);
 
         return project;
     }
 
     public async Task<IEnumerable<Project>> GetProjectsAsync()
     {
-        var projectStreams = await this._storageProvider.GetAllFilesAsync(ProjectsFolderName);
+        var projectStreams = await this._fileProvider.GetAllFilesAsync(ProjectsFolderName);
 
         var deserializeTasks = projectStreams.Select(_ => _.DeserializeStreamContent<Project>());
         var x = await Task.WhenAll(deserializeTasks);
@@ -40,7 +40,7 @@ public class ProjectsRepository : IProjectsRepository
 
     public async Task<Project> GetProjectAsync(string projectId)
     {
-        var projectStream = await this._storageProvider.GetFileAsync(ProjectsFolderName, projectId);
+        var projectStream = await this._fileProvider.GetFileAsync(ProjectsFolderName, projectId);
         return await projectStream.DeserializeStreamContent<Project>();
     }
 
@@ -53,12 +53,12 @@ public class ProjectsRepository : IProjectsRepository
         }
         
         var projectStream = project.SerializeToStreamContent();
-        await this._storageProvider.UpdateFileAsync(ProjectsFolderName, project.Id, projectStream);
+        await this._fileProvider.UpdateFileAsync(ProjectsFolderName, project.Id, projectStream);
         return project;
     }
 
     public async Task DeleteProjectAsync(string projectId)
     {
-        await this._storageProvider.DeleteFileAsync(ProjectsFolderName, projectId);
+        await this._fileProvider.DeleteFileAsync(ProjectsFolderName, projectId);
     }
 }

@@ -1,10 +1,18 @@
 using System.Text.Json.Serialization;
+using Azure;
+using Azure.Data.Tables;
 using Newtonsoft.Json;
 
 namespace PortfolioAPI.Models;
 
-public class Project
+public class Project : ITableEntity
 {
+    public virtual string PartitionKey { get; set; }
+    public virtual string RowKey { get => Id; set => Id = value; }
+    public ETag ETag { get; set; }
+    public DateTimeOffset? Timestamp { get; set; }
+
+
     [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
     [JsonPropertyName("id")]
     public string Id { get; set; }
