@@ -42,7 +42,12 @@ import axios from 'axios';
         methods: {
             PostProject()
             {
-                axios.post('https://matt-portfolio-api.azurewebsites.net/projects', this.postData).then(response => {
+                axios.post('https://matt-portfolio-api.azurewebsites.net/projects', {
+                    data: this.postData,
+                    headers: {
+                    'Access-Control-Allow-Origin' : '*'
+                    }
+                }).then(response => {
                     console.log(response);
                 }).catch(err => {
                     console.log(err);

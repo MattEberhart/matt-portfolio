@@ -2,14 +2,22 @@ using System.Text.Json.Serialization;
 using Azure;
 using Azure.Data.Tables;
 using Newtonsoft.Json;
+using JsonIgnore = Newtonsoft.Json.JsonIgnoreAttribute;
 
 namespace PortfolioAPI.Models;
 
 public class Project : ITableEntity
 {
+    [JsonIgnore]
     public virtual string PartitionKey { get; set; }
+    
+    [JsonIgnore]
     public virtual string RowKey { get => Id; set => Id = value; }
+    
+    [JsonIgnore]
     public ETag ETag { get; set; }
+    
+    [JsonIgnore]
     public DateTimeOffset? Timestamp { get; set; }
 
 
