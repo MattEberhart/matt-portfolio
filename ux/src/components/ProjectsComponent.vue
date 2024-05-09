@@ -1,6 +1,6 @@
 <template>
 <v-col>
-    <v-card>
+    <v-container>
         <v-row class="portfolio-grid">
             <!-- Iterate over portfolio items -->
             <v-col v-for="(item, index) in portfolioApiData" :key="index" class="portfolio-item">
@@ -14,7 +14,7 @@
                 </v-card>
             </v-col>
         </v-row>
-    </v-card>
+    </v-container>
 </v-col>
 </template>
 

@@ -32,7 +32,7 @@ export default {
     ProfileComponent,
     AboutMeComponent,
     SkillsComponent,
-    ProjectsComponent
+    ProjectsComponent,
   },
   data() {
     return {

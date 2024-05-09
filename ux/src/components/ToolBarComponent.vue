@@ -6,6 +6,7 @@
                 <v-tab to="/">Home</v-tab>
                 <v-tab to="/projects">Projects</v-tab>
                 <v-tab to="/resume">Resume</v-tab>
+                <v-tab to="/user">Auth0</v-tab>
             </v-tabs>
         </c-col>
     </v-row>
@@ -14,10 +15,11 @@
 </template>
 
 <script>
+
 export default {
     data: () => ({
         tab: null,
-    }),
+    })
 }
 </script>
 
